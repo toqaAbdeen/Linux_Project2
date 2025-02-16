@@ -1,0 +1,63 @@
+Question2_answers:
+
+
+    • Q1:  grep -i Mohammad prj2_passwd 
+           grep -i Mohammad prj2_passwd | grep zsh prj2_passwd
+           grep -i Mohammad prj2_passwd | grep zsh prj2_passwd | cut -d: -f1
+--------------------------------------------------------------------------------
+    • Q2:  grep -i comp322 prj2_passwd
+           grep -i comp322 prj2_passwd | sort -k3 -t: -r
+	   grep -i comp322 prj2_passwd | sort -k3 -t: -r | cut -d: -f5
+	   grep -i comp322 prj2_passwd | sort -k3 -t: -r | cut -d: -f5 | cut -		   d_ -f1
+	   grep -i comp322 prj2_passwd | sort -k3 -t: -r | cut -d: -f5 | cut -		   d_ -f1 | tr 'a-z' 'A-Z'
+--------------------------------------------------------------------------------
+    • Q3:  grep /sh prj2_passwd
+           grep /sh prj2_passwd | cut -d: -f5
+           grep /sh prj2_passwd | cut -d: -f5 | tr '_' ' '
+           grep /sh prj2_passwd | cut -d: -f5 | tr '_' ' ' | tr 'a-z' 'A-Z'
+           grep /sh prj2_passwd | cut -d: -f5 | tr '_' ' ' | tr 'a-z' 'A-Z' > sh           _shellusers
+           cat sh_shellusers
+--------------------------------------------------------------------------------
+    • Q4:  head -20 prj2_passwd
+           head -20 prj2_passwd | tail -5
+           head -20 prj2_passwd | tail -5 | cut -d: -f5
+           head -20 prj2_passwd | tail -5 | cut -d: -f5 | tr '_' ' '
+           head -20 prj2_passwd | tail -5 | cut -d: -f5 | tr '_' ' ' | tr 'a-z'            'A-Z'
+           head -20 prj2_passwd | tail -5 | cut -d: -f5 | tr '_' ' ' | tr 'a-z'            'A-Z'| sort -r
+           head -20 prj2_passwd | tail -5 | cut -d: -f5 | tr '_' ' ' | tr 'a-z'            'A-Z'| sort -r > user.txt
+           cat user.txt
+--------------------------------------------------------------------------------
+    • Q5:  cut -d: -f5 prj2_passwd
+	   cut -d: -f5 prj2_passwd | grep -i [a-o]$
+	   cut -d: -f5 prj2_passwd | grep -i [a-o]$ | cut -d_ -f1
+	   cut -d: -f5 prj2_passwd | grep -i [a-o]$ | cut -d_ -f1 > a_oSorted.tx           t
+	   cat a_oSorted.txt
+-------------------------------------------------------------------------------
+    • Q6:  grep -v /zsh prj2_passwd
+           grep -v /zsh prj2_passwd | cut -d: -f5
+           grep -v /zsh prj2_passwd | cut -d: -f5 | cut -d, -f1
+           grep -v /zsh prj2_passwd | cut -d: -f5 | cut -d, -f1 |tr 'a-z' 'A-Z
+           grep -v /zsh prj2_passwd | cut -d: -f5 | cut -d, -f1 |tr 'a-z' 'A-Z'            |sort -r
+--------------------------------------------------------------------------------
+    • Q7:  grep ^u116 prj2_passwd
+           grep ^u116 prj2_passwd | sort -k3 -t: -r
+           grep ^u116 prj2_passwd | sort -k3 -t: -r | cut -d: -f5
+           grep ^u116 prj2_passwd | sort -k3 -t: -r | cut -d: -f5 | cut -d_ -f2
+--------------------------------------------------------------------------------
+    • Q8:  find /etc -type f
+           find /etc -type f | grep -v passwd
+           find /etc -type f | grep -v passwd | less
+--------------------------------------------------------------------------------
+    • Q9:  ls /etc
+           ls /etc | grep -i ^[a-k]
+           ls /etc | grep -i ^[a-k] | wc -l
+--------------------------------------------------------------------------------
+    • Q10:  grep /ksh$ prj2_passwd
+            grep /ksh$ prj2_passwd | cut -d: -f5
+            grep /ksh$ prj2_passwd | cut -d: -f5 | tr 'a-z' ' '
+            grep /ksh prj2_passwd | cut -d: -f5 | tr 'a-z' ' ' | tr -s ' ' | cut            – c1,4
+--------------------------------------------------------------------------------
+
+
+
+
